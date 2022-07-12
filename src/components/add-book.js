@@ -9,7 +9,7 @@ export default function addBook() {
 
   const postBook = (event) => {
     axios
-      .post("http://127.0.0.1:5000/book/add", {
+      .post("https://efl-bookstore-api.herokuapp.com/book/add", {
         name: name,
         author: author,
         price: price,
@@ -17,6 +17,7 @@ export default function addBook() {
       })
       .then((response) => console.log(response))
       .catch((error) => console.error(error));
+    event.preventDefault();
   };
 
   return (
