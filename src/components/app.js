@@ -12,7 +12,7 @@ export default class App extends Component {
 
   componentDidMount() {
     axios
-      .get("https://efl-bookstore-api.herokuapp.com/book/get")
+      .get("http://127.0.0.1:5000/books")
       .then((response) => {
         console.log(response);
         this.setState({ books: response.data });
